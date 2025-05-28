@@ -1,7 +1,6 @@
 import resolve from '@rollup/plugin-node-resolve';
 import nodePolyfills from 'rollup-plugin-polyfill-node';
 import replace from '@rollup/plugin-replace';
-import markdown from '@jackfranklin/rollup-plugin-markdown';
 import css from 'rollup-plugin-import-css';
 import copy from 'rollup-plugin-copy';
 
@@ -36,8 +35,6 @@ export default {
     json(),
 
     nodePolyfills(),
-
-    markdown(),
 
     css({
       output: './dist/css/bundle.css',
