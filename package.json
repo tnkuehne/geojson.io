@@ -74,7 +74,7 @@
     "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-import-css": "^3.1.0",
     "rollup-plugin-polyfill-node": "^0.11.0",
-    "tailwindcss": "^3.2.3",
+    "tailwindcss": "^4.1.8",
     "tape": "^5.6.1"
   },
   "scripts": {
@@ -83,8 +83,8 @@
     "git-pre-commit": "lint-staged",
     "test": "npm run lint",
     "test-browser": "browserify test/index.js | testling",
-    "start": "concurrently --kill-others --names live-server rollup \"live-server --ignore=\"$PWD/src/**,$PWD/dist/webfonts/**,$PWD/.git\"\" \"rollup -cw\" \"npx tailwindcss -i $PWD/src/css/tailwind_src.css -o $PWD/dist/css/tailwind_dist.css --watch\"",
-    "build": "rimraf dist && npx tailwindcss -i ./src/css/tailwind_src.css -o ./dist/css/tailwind_dist.css && rollup -c",
+    "start": "concurrently --kill-others --names live-server rollup \"live-server --ignore=\"$PWD/src/**,$PWD/dist/webfonts/**,$PWD/.git\"\" \"rollup -cw\" \"npx @tailwindcss/cli -i $PWD/src/css/tailwind_src.css -o $PWD/dist/css/tailwind_dist.css --watch\"",
+    "build": "rimraf dist && npx @tailwindcss/cli -i ./src/css/tailwind_src.css -o ./dist/css/tailwind_dist.css && rollup -c",
     "serve": "live-server",
     "deploy": "sh deploy.sh"
   },

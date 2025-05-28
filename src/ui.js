@@ -13,7 +13,7 @@ function ui(context) {
       .append('div')
       .attr(
         'class',
-        'ui-container grow flex-shrink-0 flex flex-col md:flex-row w-full relative overflow-x-hidden'
+        'ui-container grow shrink-0 flex flex-col md:flex-row w-full relative overflow-x-hidden'
       );
 
     const map = container

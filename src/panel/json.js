@@ -31,7 +31,7 @@ module.exports = function (context) {
       .attr('id', 'tooltip')
       .attr(
         'class',
-        'opacity-0 text-white font-medium text-xs rounded text-left py-1 px-2 bg-mb-gray-dark transition-opacity duration-100'
+        'opacity-0 text-white font-medium text-xs rounded-sm text-left py-1 px-2 bg-mb-gray-dark transition-opacity duration-100'
       )
       .attr('role', 'tooltip')
       .text('Copied!');
